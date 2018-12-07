@@ -1,0 +1,488 @@
+body {
+	font-family: "Andale mono", sans-serif;
+	background-color: #ffebeb;
+	padding-top: 200px;
+	padding-bottom: 40px;
+	color: slateblue;
+}
+
+a {
+	all: unset;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#video {
+	padding: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 240px;
+	width: 320px;
+}
+
+#startbutton {
+	display:none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#uploadpic {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#savepicture {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bonjour {
+	display: block;
+	font-family: cursive;
+	padding-left: 5px;
+	padding-right: auto;
+	padding-top: 5px;
+	padding-bottom: auto;
+	color: white;
+}
+
+#title {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-weight: bold;
+	font-size: 8ex;
+	text-align: center;
+	color: white;
+}
+
+#login {
+	display: block;
+	flex-direction: row;
+	text-align: right;
+}
+
+#canvas {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	border-width: 8px;
+	border-color: slateblue;
+	border-style: dashed;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 240px;
+	width: 320px;
+	border-radius: 5px;
+	z-index: 0;
+}
+
+.filter {
+	position: relative;
+	z-index: 1;
+	padding: 20px;
+	top: -280px;
+	display: none;
+	text-align: center;
+}
+
+#background {
+}
+
+#fakeheader {
+	width: 100%;
+	height: 20px;
+	background-color: lightblue;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	display: block;
+	flex-direction: column;
+	width: 99%;
+	height: 180px;
+	background-color: lightblue;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	z-index: 2;
+	color: white;
+	border: 5px solid lightblue;
+}
+
+#footer {
+	background-color:slateblue;
+	margin: 0;
+	height: 30px;
+	width: 99%;
+	position: fixed;
+	bottom: 0;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	color: white;
+	border: 5px solid slateblue;
+}
+
+#footertext {
+	display: block;
+	flex-direction: row;
+	margin-right: 0;
+	margin-left: auto;
+	width: 450px;
+}
+
+.footercell {
+	width: 150px;
+	color: white;
+	text-align: center;
+}
+
+.message {
+	color: red;
+}
+
+.galpic {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	border-width: 8px;
+	border-color: slateblue;
+	border-style: dashed;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	border-radius: 5px;
+}
+
+.solopic {
+	border-width: 8px;
+	border-color: slateblue;
+	border-style: dashed;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	border-radius: 5px;
+}
+
+.solotext {
+	margin-top: -10px;
+	color: darkgrey;
+	font-size: 1.5ex;
+}
+
+.galtext {
+	text-align: center;
+	margin-top: -10px;
+	color: darkgrey;
+	font-size: 1.5ex;
+	text-align: center;
+}
+
+#comfield {
+	height: 200px;
+	width: 336px;
+}
+
+.unlike {
+	text-align: center;
+	margin-top: -10px;
+	color:red;
+	height: 15px;
+	width: 15px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+
+.like {
+	text-align: center;
+	margin-top: -10px;
+	color: darkgrey;
+	height: 15px;
+	width: 15px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+
+#blocvideocanv {
+	display: block;
+	flex-direction: column;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#filterslist {
+	display: block;
+	padding: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#filterstab {
+	padding: 2px;
+	border: 3px dotted white;
+	border-radius: 5px;
+	color: white;
+}
+
+#selectfilter {
+	color: white;
+	background-color: pink;
+	border-radius: 5px;
+	text-align: center;
+	margin: 5px;
+	border-width: 2px;
+	border-style: dashed;
+	padding: 5px;
+}
+
+.filtersap {
+	width: 70px;
+	height: 70px;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#bigbloc {
+	display: flex;
+	flex-direction: row;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 900px;
+}
+
+#pagination {
+	text-align: center;
+	display: block;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+}
+
+.pagenum {
+	display: inline-block;
+	flex-direction: row;
+	margin: auto;
+	width: 26px;
+	height: 26px;
+	text-align: center;
+	line-height: 20px;
+	vertical-align: middle;
+	color: slateblue;
+}
+
+#currentpage {
+	display: inline-block;
+	flex-direction: row;
+	margin: auto;
+	width: 26px;
+	height: 26px;
+	text-align: center;
+	line-height: 26px;
+	color: white;
+	background-color: lightblue;
+	border-radius: 3px;
+}
+
+#takeapicture {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 3ex;
+	color: white;
+	background-color: pink;
+	border-radius: 5px;
+	text-align: center;
+	margin: 5px;
+	border-width: 6px;
+	border-style: dashed;
+}
+
+#minigal {
+	background-color: lightblue;
+	display: block;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 5px;
+	border-width: 4px;
+	border-color: white;
+	border-style: dashed;
+	border-radius: 5px;
+	max-width:740px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+}
+
+.minipic {
+	width: 80px;
+	height: 60px;
+	margin: 5px;
+	border: 1px solid white;
+}
+
+#loginpage {
+	color: slateblue;
+}
+
+#rankby {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 800px;
+}
+
+.rankcell {
+	margin: 5px;
+	padding: 5px;
+	display: inline-block;
+	flex-direction: row;
+	justify-content: space-around;
+	cursor: pointer;
+}
+
+#datetaken {
+	background-color: lightblue;
+	color: white;
+	border-radius: 3px;
+}
+
+#mypictures {
+	background-color: pink;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#myprofile {
+	background-color: pink;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#likedpictures {
+	background-color: pink;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#upictures {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: auto;
+	padding-left: auto;
+	background-color: pink;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+	width: 300px;
+}
+
+#ulikedpictures {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: auto;
+	padding-left: auto;
+	background-color: pink;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+	width: 300px;
+}
+
+#uprofile {
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 5px;
+	padding-left: 5px;
+	min-width: 300px;
+	font-size: 3ex;
+	color: white;
+	background-color: slateblue;
+	border-radius: 5px;
+	text-align: center;
+	border-width: 6px;
+	border-style: dashed;
+}
+
+#follow {
+	all: unset;
+	cursor: pointer;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: auto;
+	padding-left: auto;
+	background-color: pink;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+	width: 300px;
+}
+
+#unfollow {
+	all: unset;
+	cursor: pointer;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: auto;
+	padding-left: auto;
+	background-color: pink;
+	color: white;
+	border-radius: 5px;
+	padding: 5px;
+	width: 300px;
+	position: relative;
+	top: -34px;
+	margin-bottom: -34px
+}
+
+#everyone {
+	background-color: pink;
+	color: white;
+	border-radius: 3px;
+	margin: 5px;
+	padding: 5px;
+	display: inline-block;
+	flex-direction: row;
+	justify-content: space-around;
+	cursor: pointer;
+}
+
+#following {
+	margin: 5px;
+	padding: 5px;
+	display: inline-block;
+	flex-direction: row;
+	justify-content: space-around;
+	cursor: pointer;
+}
+
+#showwho {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}
+
+#profileparent {
+	text-align: center;
+}
